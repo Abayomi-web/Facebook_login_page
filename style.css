@@ -1,0 +1,898 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --BGCOLOR: aliceblue;
+    --TEXT-ALIGN: center;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-size: 1.5rem;
+    min-height: 100vh;
+    max-width: 100%;
+    height: auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: var(--BGCOLOR);
+}
+.header {
+    /* float: left;
+    width: 40%; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.header .para {
+    text-align: center;
+}
+.header h1{
+    text-align: center;
+}
+h1 {
+    color: royalblue;
+    font-size: 4rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-top: 1rem;
+}
+.para {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    font-size: 1.6rem;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+form {
+    background-color: white;
+    width: min(100%, 400px);
+    box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.39);
+    margin: auto;
+    margin-top: 0.5rem;
+    border-radius: 10px;
+}
+label {
+    display: none;
+}
+input{
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 0rem;
+    padding: 1rem;
+    width: 370px;
+    border: 1px solid rgba(0, 0, 0, 0.137);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+input:focus {
+    outline: 1px solid royalblue;
+}
+button {
+    width: 370px;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: royalblue;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    border: none;
+    border-radius: 6px;
+}
+.forget {
+    margin-left: 8rem;
+    font-size: 1rem;
+    text-decoration: none;
+    color: royalblue;
+    position: relative;
+    /* border-bottom: 1px solid black; */
+    padding-bottom: 1rem;
+}
+.forget:hover {
+    text-decoration: underline;
+}
+.style {
+    width: 84%;
+    height: 1px;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    background-color: rgba(0, 0, 0, 0.137);
+} 
+/* .forget::before {
+    content: " ";
+    width: 250px;
+    height: 2px;
+    position: absolute;
+    background-color: black;
+    top: 100%;
+    left: 0;
+    
+} */
+/* .forget::after {
+    content: " ";
+    width: 250px;
+    height: 2px;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.137);
+    top: 100%;
+    right: 0;
+} */
+.button {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    width: 200px;
+    font-size: 1rem;
+    margin-left: 6rem;
+    padding: 0.8rem 0;
+    background-color: rgba(46, 207, 14, 0.856);
+}
+.button:hover {
+    background-color: rgb(35, 189, 30);
+}
+p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+p .create {
+    color: black;
+    font-weight: 800;
+    text-decoration: none;
+}
+.create:hover {
+    text-decoration: underline;
+}
+footer{
+    font-size: 1rem;
+    color: black;
+    background-color: white;
+    opacity: 0.6;
+    width: 100%;
+    height: auto;
+}
+footer #lang {
+    padding-top: 0.5rem;
+    padding-left: 1.2rem;
+    margin-top: 1.5rem;
+}
+footer #below {
+    padding-left: 1.2rem;
+    margin-top: 1rem;
+}
+ .style01 {
+    width: 80%;
+    height: 1px;
+    margin-left: 1.3rem;
+    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.137);
+}
+footer #lang .tooltip:last-child {
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 3px;
+    padding-right: 4px;
+    text-align: center;
+}
+footer #lang .tooltip:hover {
+    background-color: aliceblue;
+    text-decoration: none;
+}
+.tooltip {
+    position: relative;
+    display: inline;
+    white-space: nowrap;
+    padding: 0;
+}
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+.tooltip:hover {
+    text-decoration: underline;
+}
+.tooltip .tooltiptext1 {
+    visibility: hidden;
+    width: 160px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext1 {
+    visibility: visible;
+}
+.tooltip .tooltiptext2 {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext2 {
+    visibility: visible;
+}
+.tooltip .tooltiptext3 {
+    visibility: hidden;
+    width: 400px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext3 {
+    visibility: visible;
+}
+.tooltip .tooltiptext4 {
+    visibility: hidden;
+    width: 470px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext4 {
+    visibility: visible;
+}
+.tooltip .tooltiptext01 {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext01 {
+    visibility: visible;
+}
+.tooltip .tooltiptext02 {
+    visibility: hidden;
+    width: 270px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext02 {
+    visibility: visible;
+}
+.tooltip .tooltiptext03 {
+    visibility: hidden;
+    width: 340px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext03 {
+    visibility: visible;
+}
+.tooltip .tooltiptext003 {
+    visibility: hidden;
+    width: 250px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext003 {
+    visibility: visible;
+}
+.tooltip .tooltiptext04 {
+    visibility: hidden;
+    width: 380px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext04 {
+    visibility: visible;
+}
+.tooltip .tooltiptext004 {
+    visibility: hidden;
+    width: 280px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext004 {
+    visibility: visible;
+}
+.tooltip .tooltiptext5 {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    white-space: wrap;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 0;
+}
+.tooltip:hover .tooltiptext5 {
+    visibility: visible;
+} 
+.tooltip .tooltiptext05 {
+    visibility: hidden;
+    width: 200px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext05 {
+    visibility: visible;
+}
+.tooltip .tooltiptext005 {
+    visibility: hidden;
+    width: 160px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext005 {
+    visibility: visible;
+}
+.tooltip .tooltiptext6 {
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext6 {
+    visibility: visible;
+}
+.tooltip .tooltiptext06 {
+    visibility: hidden;
+    width: 280px;
+    background-color: black;
+    color: aliceblue;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    right: 0;
+}
+.tooltip:hover .tooltiptext06 {
+    visibility: visible;
+}
+.copyright {
+    text-align: start;
+    padding-left: 1.2rem;
+    padding-bottom: 0.5rem;
+}
+@media screen and (max-width: 374px) {
+    .header h1 {
+        font-size: 3rem;
+    }
+    .header .para {
+        font-size: 1rem;
+    }
+    .form form {
+        width: min(100%, 260px);
+        margin: auto;
+    }
+    .form input {
+        width: min(100%, 225px);
+        font-size: 0.8rem;
+    }
+    .form button {
+        width: min(100%, 225px);
+    }
+    .form form .forget {
+        margin-left: 4rem;
+    }
+    .form form .button {
+        margin-left: 1.2rem;
+    }
+}
+@media screen and (max-width: 660px) {
+    h1 {
+        font-size: 4rem;
+        font-family: serif;
+    }
+    .para {
+        font-size: 1.8rem;
+        margin-left: 1.6rem;
+        margin-right: 1.6rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    form {
+        width: min(100%, 360px);
+    }
+    input {
+        width: min(100%, 330px);
+        font-size: min(60%, 1rem);
+    }
+    button {
+        width: min(100%, 337px);
+    }
+    .form .forget {
+        margin-left: 7rem;
+    }
+    .form .button {
+        margin-left: 5rem;
+    }
+    footer {
+        font-size: 1rem;
+        white-space: wrap;
+    }
+    .tooltiptext {
+        display: none;
+    }
+    footer #below :is(.tooltiptext003, .tooltiptext004, .tooltiptext005, .tooltiptext01, .tooltiptext02, .tooltiptext03, .tooltiptext04, .tooltiptext05, .tooltiptext06, .tooltiptext1, .tooltiptext2, .tooltiptext3, .tooltiptext4, .tooltiptext5, .tooltiptext6) {
+        display: none;
+    }
+}
+@media screen and (min-width: 660px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .para {
+        font-size: 2rem;
+    }
+    input{
+        margin-left: 1rem;
+        width: 370px;
+        font-size: 1rem;
+    }
+    button {
+        width: 370px;
+        margin-left: 1rem;
+        font-size: 1.2rem;
+    }
+    .form .forget {
+        margin-left: 8rem;
+        font-size: 1rem;
+    }
+    .form .button {
+        width: 200px;
+        font-size: 1rem;
+        margin-left: 6rem;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+    .tooltip {
+        position: relative;
+        display: inline;
+        white-space: nowrap;
+    }
+    .tooltip .tooltiptext2 {
+        white-space: wrap;
+        width: 85px;
+   }
+    .tooltip .tooltiptext {
+        white-space: wrap;
+        width: 70px;
+   }
+    .tooltip .tooltiptext004 {
+        white-space: wrap;
+        width: 200px;
+    }
+    .tooltip .tooltiptext5 {
+        white-space: wrap;
+        width: 150px;
+   }
+    .tooltip .tooltiptext1 {
+    white-space: wrap;
+    width: 83px;
+   }
+    .tooltip .tooltiptext3 {
+    white-space: wrap;
+    width: 220px;
+   }
+   .tooltip .tooltiptext003 {
+    white-space: wrap;
+    width: 150px;
+   }
+   .tooltip .tooltiptext06 {
+    white-space: wrap;
+    width: 150px;
+   }
+}
+@media screen and (min-width: 768px) {
+   .header {
+    float: left;
+    width: 40%;
+    margin-top: 5rem;
+   } 
+   .header h1 {
+    text-align: start;
+    margin-left: 1rem;
+   }
+   .header .para {
+    font-size: 1.6rem;
+    text-align: start;
+    margin-left: -1rem;
+    margin-right: -1rem;
+   }
+   h1 {
+    font-size: 4rem;
+   }
+   .form {
+    margin-top: 6rem;
+    width: 60%;
+   }
+   p {
+    font-size: 1rem;
+   }
+   footer {
+    font-size: 1.5rem;
+   }
+   footer .copyright {
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+   }
+   .tooltip {
+    position: relative;
+    display: inline;
+    white-space: nowrap;
+}
+   .tooltip .tooltiptext1 {
+    white-space: wrap;
+    width: 130px;
+   }
+   .tooltip .tooltiptext02 {
+    white-space: wrap;
+    width: 120px;
+   }
+   .tooltip .tooltiptext01 {
+    white-space: wrap;
+    width: 120px;
+   }
+   .tooltip .tooltiptext {
+    white-space: wrap;
+    width: 110px;
+   }
+   .tooltip .tooltiptext2 {
+    white-space: wrap;
+    width: 130px;
+   }
+   .tooltip .tooltiptext05 {
+    white-space: wrap;
+    width: 120px;
+   }
+   .tooltip .tooltiptext6 {
+    white-space: wrap;
+    width: 120px;
+   }
+   .tooltip .tooltiptext003 {
+    white-space: wrap;
+    width: 250px;
+   }
+}
+@media screen and (min-width: 674px) {
+    #lang .tooltip .tooltiptext {
+        display: none;
+    }
+    .tooltip .tooltiptext3 {
+        white-space: wrap;
+        width: 140px;
+    }
+}
+@media screen and (min-width: 712px) {
+    #lang .tooltip .tooltiptext {
+        display: none;
+    }
+    .tooltip .tooltiptext2 {
+        white-space: wrap;
+        width: 80px;
+    }
+}
+@media screen and (min-width: 770px){
+    footer {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 790px){
+    .tooltip .tooltiptext005 {
+        white-space: wrap;
+        width: 120px;
+    }
+    footer {
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width: 844px) {
+    #lang .tooltip .tooltiptext {
+        display: inline;
+        width: 60px;
+    }
+    .tooltip .tooltiptext004 {
+        white-space: wrap;
+        width: 120px;
+    }
+    .tooltip .tooltiptext {
+        white-space: wrap;
+        width: 60px;
+    }
+    .tooltip .tooltiptext1 {
+        white-space: wrap;
+        width: 70px;
+    }
+    .tooltip .tooltiptext6 {
+        white-space: wrap;
+        width: 88px;
+    }
+    .tooltip .tooltiptext5 {
+        white-space: wrap;
+        width: 90px;
+    }
+}
+@media screen and (min-width: 921px) {
+    .tooltip .tooltiptext004 {
+        white-space: wrap;
+        width: 60px;
+        text-align: start;
+    }
+    .tooltip .tooltiptext2 {
+        width: 100px;
+        white-space: wrap;
+    }
+}
+@media screen and (min-width: 930px) {
+    .tooltip .tooltiptext004 {
+        white-space: wrap;
+        width: 100px;
+        text-align: center;
+    }
+}
+@media screen and (min-width: 1440px) {
+    .header {
+        margin-top: 8rem;
+    }
+    .form {
+        margin-top: 8rem;
+    }
+    h1 {
+        font-size: 6rem;
+    }
+    .header .para {
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+   footer {
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+   } 
+   footer #lang {
+    padding-top: 2rem;
+   }
+   footer #below {
+    padding-top: 2rem;
+   }
+   .style01 {
+    margin-top: 2rem;
+   }
+   .copyright {
+    padding-top: 2rem;
+   }
+}
+@media screen and (min-width: 2560px) {
+    .header h1 {
+        font-size: 8rem;
+    }
+    .header .para {
+        font-size: 4rem;
+    }
+    .form form {
+        margin-top: 9rem;
+        width: 700px;
+        height: auto;
+        padding-top: 1rem;
+    }
+    .form form input {
+        font-size: 2rem;
+        width: 650px;
+    }
+    button {
+        width: 650px;
+        font-size: 2rem;
+    }
+    .form form .forget {
+        margin-left: 13rem;
+        font-size: 2rem;
+    }
+    .form form .button {
+        font-size: 1.5rem;
+        white-space: nowrap;
+        width: 300px;
+        margin-left: 12rem;
+    }
+    footer {
+        font-size: 3rem;
+        padding-bottom: 17rem;
+    }
+    footer #lang {
+        padding-top: 5rem;
+    }
+    footer #below {
+        padding-top: 5rem;
+    }
+    footer .style01 {
+        margin-top: 5rem;
+    }
+    footer .copyright {
+        padding-top: 5rem;
+        padding-bottom: 0rem;
+        font-size: 2.8rem;
+    }
+    .tooltip .tooltiptext2 {
+        width: 200px;
+        white-space: wrap;
+    }
+    #lang .tooltip .tooltiptext {
+        width: 170px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext {
+        width: 170px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext6 {
+        width: 200px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext02 {
+        width: 260px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext01 {
+        width: 200px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext1 {
+        width: 200px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext004 {
+        width: 270px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext5 {
+        width: 200px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext3 {
+        width: 350px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext2 {
+        width: 280px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext05 {
+        width: 240px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext005 {
+        width: 240px;
+        white-space: wrap;
+    }
+    #below .tooltip .tooltiptext06 {
+        width: 270px;
+        white-space: wrap;
+    }
+}
